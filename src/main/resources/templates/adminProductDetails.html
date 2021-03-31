@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/header :: header_resources">
+
+</head>
+<body>
+<nav th:insert="fragments/navbar :: nav_fragment"></nav>
+
+<div class="container">
+
+    <div class="card">
+        <div class="card-header card bg-info text-white">
+            <h2>Product Details</h2>
+        </div>
+
+        <div class="card-body">
+
+            <div>
+                <p>ID: <span th:text="${productDto.id}"></span></p>
+                <p>Name: <span th:text="${productDto.name}"></span></p>
+                <p>Price: <span th:text="${productDto.price}"></span></p>
+                <p>Details: <span th:text="${productDto.productDetailsDto.name}"></span></p>
+            </div>
+
+        </div>
+        <div class="card-footer">Footer</div>
+    </div>
+</div>
+
+
+
+
+
+<footer th:insert="fragments/footer :: footer_fragment"></footer>
+</body>
+</html>
